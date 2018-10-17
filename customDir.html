@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <custom-directive> </custom-directive>
+        <script>
+        var app = angular.module("myApp", []);
+        app.directive("customDirective", function() {
+            return {
+                template: "<h1>This is Custom Directive</h1>"
+            };
+        });
+        </script>
+    </body>
+</html>
