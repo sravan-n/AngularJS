@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>>
+    </head>
+    <body ng-app="myApp">
+        <p>What scope is this ? {{ scope }}</p>
+        <p ng-controller="ctrl1">What scope is this ? {{ scope }}</p>
+        <p>What scope is this ? {{ scope }}</p>
+        <p ng-controller="ctrl2">What scope is this ? {{ scope }}</p>
+        <script>
+        var app = angular.module("myApp", []);
+        app.run(function($rootScope) {
+            $rootScope.scope = "Root Scope";
+        });
+        app.controller("ctrl1", function($scope) {
+            $scope.scope = "Scope 1";
+        });
+        app.controller("ctrl2", function($scope) {
+            $scope.scope = "Scope 2";
+        });
+        </script>
+    </body>
+</html>
