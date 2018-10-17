@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat=" x in details ">{{ x.name | uppercase}}</li>
+        </ul>
+    </div>
+    <script>
+    var app = angular.module ("myApp", []).controller("myCtrl", function($scope) {
+        $scope.details = [
+            {name: 'sravan', age: 26},
+            {name: 'pranav', age: 23},
+            {name: 'hemanth', age: 20},
+            {name: 'srikanth', age: 18},
+            {name: 'niharika', age: 20},
+            {name: 'venkatesh', age: 17}
+        ];
+    });
+    </script>
+</body>
+</html>
