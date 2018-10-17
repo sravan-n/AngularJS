@@ -1,10 +1,18 @@
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
-    </head>
+    <title>Change Color</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
+    <style>
+        #box {
+            height: 10px; width: 500px; 
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
     <body>
-        <div ng-app="" ng-init="color='red'">
-            Enter Color: <input type="text" style="background-color:{{color}}" ng-model="color">
+        <div id = "container" ng-app="">
+            <h1>Change the Color</h1>
+            Enter Color:<input type="text" ng-model="color">
+            <div id="box" style="background-color:{{color}};"></div>
         </div>
     </body>
 </html>
